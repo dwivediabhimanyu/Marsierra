@@ -11,21 +11,85 @@
     <title>Marsierra</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favico n.png">
+    <link rel="icon" href="./img/core-img/favicon.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mystyle.css">
+<style>
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.welcome_content {
+  text-align: center;
+  font-size: 6rem;
+color:#fff;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#1CC3B2;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.2;
+  
+}
+.right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 2.5em;
+  margin: auto;
+  background: #1cc3b2;
+  color: #fff;
+}
+.right {
+   right: 0;
+   -webkit-transform-origin: 70% 50%;
+      -moz-transform-origin: 70% 50%;
+       -ms-transform-origin: 70% 50%;
+        -o-transform-origin: 70% 50%;
+           transform-origin: 70% 50%;
+   -webkit-transform: rotate(-90deg) translate(-50%, 50%);
+      -moz-transform: rotate(-90deg) translate(-50%, 50%);
+       -ms-transform: rotate(-90deg) translate(-50%, 50%);
+        -o-transform: rotate(-90deg) translate(-50%, 50%);
+           transform: rotate(-90deg) translate(-50%, 50%);
+z-index: 9999;
+}
+
+</style>
 </head>
 
 <body>
+        
+        <button type="button" class="btn right" ><b>Send Enquiry</b></button>
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
     <!-- /Preloader -->
-
+    
     <!-- Header Area Start -->
     <header class="header-area">
 
@@ -38,8 +102,8 @@
         
                     <div class="col-6">
                         <div class="top-header-content ml-auto">
-                            <a href="#"><i class="icon_mail"></i> <span>example@email.com</span></a>
-                            <a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
+                            <a href="#"><i class="icon_mail"></i> <span>info@jaglaxrealty.com</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span>(+91) 838-401-7825</span></a>
                         </div>
                     </div>
         
@@ -50,13 +114,14 @@
 
         <!-- Main Header Start -->
         <div class="main-header-area">
+            
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Classy Menu -->
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/image--001.jpg" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="./img/core-img/image--002.jpg" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -72,8 +137,8 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Homes</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="homes.html">Homes</a></li>
                                     <li><a href="#">Gallery</a></li>
                                     <li><a href="#">Amenities</a></li>
                                     <li><a href="#">Sustainability</a></li>
@@ -90,40 +155,24 @@
     </header>
     <!-- Header Area End -->
 
-    <!-- Welcome Area Start -->
-    <section class="welcome-area">
 
+    <div class="section">
 
-            <!-- Single Welcome Slide -->
-
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/core-img/2.gif);" data-img-url="img/bg-img/16.jpg">
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12">
-                                <div class="welcome-text text-center">
-                                    <<h2>{Lady Logo goes here}</h2>>
-                                    <a href="#" class="btn roberto-btn btn-2" data-toggle="modal" data-target="#myModal">Take a Tour</a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="welcome_content">
+                <h1 style="color: white">A royal abode</h1>
+                    <div class="video-content-area mt-100 wow fadeInUp" data-wow-delay="500ms">
+                        <a href="https://www.youtube.com/watch?v=Xc9nBXKYPQw" class="video-play-btn"><h4 style="border: white; color: white; border-radius: 10px;border-style: solid;padding: 10px;"><i class="fa fa-play"></i> Take a tour</h4></a>
                     </div>
-                </div>
-    </section>
+        </div>
 
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay="" loop="" muted="">
+                <source src="img/Sea.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-UpXqTWaaSA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
     </div>
-  </div>
-  
-</div>
-    <!-- Welcome Area End -->
 
     <!-- Blog Area Start -->
     <section class="roberto-blog-area section-padding-100-0">
@@ -136,11 +185,10 @@
                         <img src="img/core-img/border-top.PNG" alt="" width="170px">
                         <h1>Apartments</h1>
                         <img src="img/core-img/border-bottom.PNG" alt="" width="170px">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/b.jpg" alt=""></a>
+                        <a href="homes.html#appartments" class="post-thumbnail"><img src="img/bg-img/appartments.jpg" hieght="417" alt=""></a>
                         <!-- Post Title -->
                         <a href="#" class="post-title">An apartment so luxurious, you'll wish you could stay inside forever.</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut sapien vitae nibh facilisis iaculi</p>
-                        <a href="#" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                       <a href="homes.html#appartments" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -150,11 +198,10 @@
                             <img src="img/core-img/border-top.PNG" alt="" width="170px">
                             <h1>Villas</h1>
                             <img src="img/core-img/border-bottom.PNG" alt="" width="170px">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/a.jpg" alt=""></a>
+                        <a href="homes.html#villas" class="post-thumbnail"><img src="img/bg-img/villa.jpg" alt=""></a>
                         <!-- Post Title -->
                         <a href="#" class="post-title">You are no less than a King. You deserve nothing less than a palace.</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut sapien vitae nibh facilisis iaculi</p>
-                        <a href="#" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                           <a href="homes.html#villas" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -182,7 +229,36 @@
         </div>
     </section>
     <!-- Call To Action Area End -->
-    <br><br>
+    <!-- Partner Area Start -->
+    <div class="partner-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/kohler.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/urban_ladder.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/mitsubushi.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/kaff.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/fenesta.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/samsung.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/philips.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/a_class.png" alt=""></a>
+                            <!-- Single Partner Logo -->
+                            <a href="#" class="partner-logo"><img src="img/partners/zeba.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partner Area End -->
 
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
@@ -196,8 +272,8 @@
                             <!-- Footer Logo -->
                             <a href="#" class="footer-logo"><img src="img/core-img/image--001.jpg" alt=""></a>
 
-                            <h4>+12 345-678-9999</h4>
-                            <span>example@email.com</span>
+                            <h4>(+91) 838-401-7825</h4>
+                            <span>info@jaglaxrealty.com</span>
                             <span>Marsierra , 17/2, Siolim-Sodiem Bardez, North Goa - 403517</span>
                         </div>
                     </div>
@@ -212,7 +288,7 @@
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Homes</a></li>
+                                <li><a href="homes.html"><i class="fa fa-caret-right" aria-hidden="true"></i> Homes</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Gallery</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Amenities</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Sustainability</a></li>
@@ -257,6 +333,8 @@ Copyright &copy; 2019 All rights reserved | Made with Love by Dazzelnut
         </div>
     </footer>
     <!-- Footer Area End -->
+
+    
 
     <!-- **** All JS Files ***** -->
     <!-- jQuery 2.2.4 -->
